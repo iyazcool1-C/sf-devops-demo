@@ -22,4 +22,4 @@ jobs:
           sf org login sfdx-url --sfdx-url-file auth.txt --alias DevOrg --set-default
 
       - name: Deploy to Salesforce
-        run: sf project deploy start --source-dir force-app/main/default --ignore-warnings
+        run: sf project deploy start --source-dir force-app/main/default/classes --ignore-warnings
