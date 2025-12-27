@@ -22,5 +22,4 @@ jobs:
           sf org login sfdx-url --sfdx-url-file auth.txt --alias DevOrg
 
       - name: Deploy to Salesforce
-        working-directory: sf-devops-demo
         run: sf project deploy start --source-dir force-app --ignore-warnings
