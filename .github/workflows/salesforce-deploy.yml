@@ -8,8 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
 
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -21,5 +21,14 @@ jobs:
           echo "${{ secrets.SFDX_AUTH_URL }}" > auth.txt
           sf org login sfdx-url --sfdx-url-file auth.txt --alias DevOrg
 
+      - name: Debug – current directory
+        run: pwd
+
+      - name: Debug – list root files
+        run: ls -la
+
+      - name: Debug – check force-app
+        run: ls -la force-app
+
       - name: Deploy to Salesforce
-        run: sf project deploy start --source-dir force-app --ignore-warnings
+        run: sf project deploy start --source-dir force-app --target-org DevOrg --ignore-warnings
