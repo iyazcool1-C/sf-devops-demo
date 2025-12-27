@@ -31,4 +31,5 @@ jobs:
         run: ls -la force-app
 
       - name: Deploy to Salesforce
-        run: sf project deploy start --source-dir force-app --target-org DevOrg --ignore-warnings
+        run: sf project deploy start --manifest manifest/package.xml --target-org DevOrg --ignore-warnings
+        
