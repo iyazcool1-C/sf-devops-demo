@@ -52,7 +52,7 @@ jobs:
           cat package/package.xml
           
       - run: echo "${{ secrets.SALESFORCE_JWT_SECRET_KEY }}" > server.key
-      - run: sf org login jwt --client-id 3MVG9HtWXcDGV.nEs8GayoPNPNFvr3oFifSGY9BYQ9tRb4V6Sv1a6rIDZGQ.fegNIo2H46RJ396QYonqVD1D4 --jwt-key-file server.key --username iyazcool1912@agentforce.com --instance-url https://orgfarm-66d0f2d1a2-dev-ed.develop.my.salesforce.com --alias production
+      - run: sf org login jwt --client-id 3MVG9HtWXcDGV.nEs8GayoPNPNFvr3oFifSGY9BYQ9tRb4V6Sv1a6rIDZGQ.fegNIo2H46RJ396QYonqVD1D4 --jwt-key-file server.key --username 	iyazcool1912@agentforce.com --instance-url http://orgfarm-66d0f2d1a2-dev-ed.develop.my.salesforce.com --alias production
       - name: Deploy Delta components to Salesforce RunSpecifiedTests
         if: ${{ env.APEX_TESTS != 'all' }}
         run: |
