@@ -30,6 +30,6 @@ public class VerifyDate {
  }
  /*
  //Newly Changes updated by me and Naveen
- add Merge comments like
+ add Merge comments likes
  Apex::[VerifyDateTest]::Apex
  */
