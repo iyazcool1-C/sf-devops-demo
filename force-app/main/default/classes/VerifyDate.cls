@@ -29,7 +29,7 @@ public class VerifyDate {
     }
  }
  /*
- //Newly Changes updated by me and Naveen
+ // Github actions demo 
  add Merge comments like
  Apex::[VerifyDateTest]::Apex
  */
